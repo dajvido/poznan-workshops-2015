@@ -27,6 +27,7 @@ group :development do
   gem 'rails_layout'
   gem 'spring-commands-rspec'
   gem 'quiet_assets'
+  gem 'xray-rails'
 end
 
 group :development, :test do
