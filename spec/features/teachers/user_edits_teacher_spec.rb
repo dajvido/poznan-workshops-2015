@@ -13,7 +13,7 @@ feature 'User edits teacher spec' do
 
   scenario 'and checks breadcrumbs presence' do
     within('.breadcrumbs') do
-      expect(page).to have_content 'RoR Workhops » Teachers  » Dr. Pies Pluto'
+      expect(page).to have_content 'RoR Workshops » Teachers  » Dr. Pies Pluto'
     end
   end
 

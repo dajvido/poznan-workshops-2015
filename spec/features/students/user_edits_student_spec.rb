@@ -13,7 +13,7 @@ feature 'User edits student' do
 
   scenario 'and checks breadcrumbs presence' do
     within('.breadcrumbs') do
-      expect(page).to have_content 'RoR Workhops » Students  » Jan Abacki'
+      expect(page).to have_content 'RoR Workshops » Students  » Jan Abacki'
     end
   end
 

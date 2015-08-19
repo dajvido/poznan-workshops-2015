@@ -15,7 +15,7 @@ feature 'User checks student subjects' do
 
   scenario do
     within('.breadcrumbs') do
-      expect(page).to have_content 'RoR Workhops » Students » Jan Nowak subjects'
+      expect(page).to have_content 'RoR Workshops » Students » Jan Nowak subjects'
     end
 
     expect(page).to have_content 'Math'

@@ -13,7 +13,7 @@ feature 'User checks teacher subjects' do
 
   scenario do
     within('.breadcrumbs') do
-      expect(page).to have_content 'RoR Workhops » Teachers » Pies Pluto subjects'
+      expect(page).to have_content 'RoR Workshops » Teachers » Pies Pluto subjects'
     end
 
     expect(page).to have_content 'Boring subject item'

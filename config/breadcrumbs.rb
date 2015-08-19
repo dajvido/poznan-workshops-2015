@@ -1,5 +1,9 @@
 crumb :root do
-  link 'RoR Workhops', root_path
+  link t('navbar.root'), root_path
+end
+
+crumb :students do
+  link t('navbar.students'), students_path
 end
 
 crumb :student do |student|
