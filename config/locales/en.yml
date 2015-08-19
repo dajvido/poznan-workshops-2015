@@ -24,6 +24,7 @@ en:
     columns:
       first_name: first name
       last_name: last name
+      birthdate: date of birth
   teacher:
     columns:
       first_name: first name
@@ -32,4 +33,5 @@ en:
   subjects:
     columns:
       full_name: Full name
+      birthdate: Date of birth
       avg_notes: Notes avarange

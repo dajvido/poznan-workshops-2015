@@ -18,12 +18,20 @@ teachers = Teacher.all
   )
 end
 
-25.times do
+15.times do
   Student.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name
   )
 end
+10.times do
+  Student.create!(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    birthdate: Faker::Date.between(18.years.ago, 14.years.ago)
+  )
+end
+
 
 students = Student.all
 SubjectItem.all.each do |subject_item|
