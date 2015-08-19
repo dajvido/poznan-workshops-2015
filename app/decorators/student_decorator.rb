@@ -8,7 +8,7 @@ class StudentDecorator < BaseDecorator
   end
 
   def avg_notes(subject_item)
-    notes = subject_item.subject_item_notes
+    notes = subject_item.subject_item_notes.where(student: student)
     sprintf('%.2f', notes.empty? ? 0 : notes.map(&:value).inject(:+).to_f / notes.count)
   end
 end
