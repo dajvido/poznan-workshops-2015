@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'dotenv-rails'
 gem 'gretel'
 gem 'devise'
+gem 'faker'
 
 group :development do
   gem 'better_errors'
@@ -35,7 +36,6 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'rspec-rails'
   gem 'spring'
   gem 'web-console', '~> 2.0'
