@@ -21,14 +21,24 @@ end
 15.times do
   Student.create!(
     first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name
+    last_name: Faker::Name.last_name,
+    start_date: Date.new((2013..2015).to_a.sample, 10, 1)
   )
 end
 10.times do
   Student.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    birthdate: Faker::Date.between(18.years.ago, 14.years.ago)
+    birthdate: Faker::Date.between(30.years.ago, 21.years.ago),
+    start_date: Date.new(2013, 10, 1),
+    end_date: Date.new([2014,2015].sample, [10,2].sample, 1)
+  )
+end
+
+30.times do
+  Payment.create!(
+    student_id: (1..25).to_a.sample,
+    amount: [700, 1400, 7000].sample
   )
 end
 

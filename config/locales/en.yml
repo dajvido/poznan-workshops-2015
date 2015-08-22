@@ -5,6 +5,7 @@ en:
     teachers: Teachers
     reports: Reports
     reports_subjects: Subjects
+    payments: Payments
     logout: Logout
     signin: Sign in
     signup: Sign up
@@ -20,11 +21,15 @@ en:
     back: Back
     add_new_item: Add new one
     subjects: subjects
+    in_debt: in debt?
+    debt: debt
   student:
     columns:
       first_name: first name
       last_name: last name
       birthdate: date of birth
+      start_date: start study
+      end_date: end study
   teacher:
     columns:
       first_name: first name
@@ -35,3 +40,9 @@ en:
       full_name: Full name
       birthdate: Date of birth
       avg_notes: Notes avarange
+  payment:
+    columns:
+      student: full name
+      amount: amount
+      created_at: payment date
+

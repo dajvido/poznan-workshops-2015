@@ -10,5 +10,22 @@
     %tr
       %td= "#{t('student.columns.birthdate')}:"
       %td= student.birthdate
+    %tr
+      %td= "#{t('student.columns.start_date')}:"
+      %td= student.decorate.study_date(student.start_date)
+    %tr
+      %td= "#{t('student.columns.end_date')}:"
+      %td= student.decorate.study_date(student.end_date)
+    %tr
+      %td= "#{t('shared.in_debt')}:"
+      - unless student.in_debt?
+        %td= fa_icon 'thumbs-o-up'
+      - else
+        %td= fa_icon 'thumbs-down'
+        %tr
+          %td= "#{t('shared.debt')}:"
+          %td= student.decorate.dollars
+
+
 
 = link_to t('shared.back'), students_path, class: 'btn btn-default'

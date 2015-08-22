@@ -1,0 +1,28 @@
+%h1 Listing payments
+= link_to t('shared.add_new_item'), new_payment_path, class: 'btn btn-default'
+
+%table.table.table-condensed
+  %thead
+    %tr
+      %th
+      %th
+      %th
+      %th
+
+  %tbody
+    - payments.each do |payment|
+      %tr
+        %td= payment.student.decorate.full_name
+        %td= payment.decorate.dollars
+        %td= payment.decorate.payment_date
+        %td
+          = link_to payment_path(payment), { title: t('shared.show') } do
+            %button.btn.btn-default
+              = fa_icon "search"
+          = link_to edit_payment_path(payment), { title: t('shared.edit') } do
+            %button.btn.btn-default
+              = fa_icon "edit"
+          = link_to payment_path(payment), { method: :delete, title: t('shared.delete') } do
+            %button.btn.btn-default
+              = fa_icon "times"
+

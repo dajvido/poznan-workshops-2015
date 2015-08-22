@@ -1,0 +1,13 @@
+= simple_form_for(payment) do |f|
+  = f.error_notification
+
+  .form-inputs
+    .form-group.required
+      = f.label :student, required: true, class: "control-label"
+      = f.collection_select :student_id, Student.order(:last_name), :id, -> (s) { s.decorate.full_name }, { prompt: 'Select student'}, { class: "form-control" }
+      = f.error :student_id
+    = f.input :amount
+
+  .form-actions
+    = link_to t('shared.back'), payments_path, class: 'btn btn-default'
+    = f.button :submit

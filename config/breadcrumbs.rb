@@ -25,6 +25,15 @@ crumb :teacher do |teacher|
   parent :teachers
 end
 
+crumb :payments do
+  link t('navbar.payments'), payments_path
+end
+
+crumb :payment do |payment|
+  link "#{payment.student.decorate.full_name}", payment_path(payment)
+  parent :payments
+end
+
 crumb :teacher_subjects do |teacher|
   link "#{teacher.first_name} #{teacher.last_name} #{t('shared.subjects')}", teacher_subjects_path(teacher)
   parent :teachers

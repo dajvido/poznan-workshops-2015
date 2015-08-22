@@ -8,6 +8,8 @@ gem 'decent_decoration'
 gem 'draper'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-datatables-rails', '~> 3.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'haml-rails'
 gem 'high_voltage'
@@ -52,4 +54,5 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
+  gem 'simplecov', :require => false
 end
